@@ -59,6 +59,16 @@ document.addEventListener('DOMContentLoaded', function() {
                         inline: true
                     },
                     {
+                        name: 'E-mail',
+                        value: dados.email,
+                        inline: true
+                    },
+                    {
+                        name: 'Telefone',
+                        value: dados.telefone,
+                        inline: true
+                    },
+                    {
                         name: 'Data da Inscrição',
                         value: dados.dataInscricao,
                         inline: true
@@ -89,8 +99,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 botao.textContent = 'Inscrição Concluída!';
                 botao.style.backgroundColor = '#4CAF50';
                 
+                // CORREÇÃO: Usar caminho absoluto para a página obrigado.html
                 setTimeout(() => {
-                    window.location.href = '../obrigado.html';
+                    window.location.href = '/obrigado.html';
                 }, 1500);
             } else {
                 throw new Error('Erro ao enviar dados');
