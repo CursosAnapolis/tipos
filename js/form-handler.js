@@ -35,37 +35,37 @@ document.addEventListener('DOMContentLoaded', function() {
                 fields: [
                     {
                         name: 'Nome',
-                        value: dados.nome,
+                        value: dados.nome || 'Não informado',
                         inline: true
                     },
                     {
                         name: 'Idade',
-                        value: dados.idade,
+                        value: dados.idade || 'Não informado',
                         inline: true
                     },
                     {
                         name: 'CPF',
-                        value: dados.cpf,
+                        value: dados.cpf || 'Não informado',
                         inline: true
                     },
                     {
                         name: 'Nome da Mãe',
-                        value: dados.mae,
+                        value: dados.mae || 'Não informado',
                         inline: true
                     },
                     {
                         name: 'Nome do Pai',
-                        value: dados.pai,
+                        value: dados.pai || 'Não informado',
                         inline: true
                     },
                     {
                         name: 'E-mail',
-                        value: dados.email,
+                        value: dados.email || 'Não informado',
                         inline: true
                     },
                     {
                         name: 'Telefone',
-                        value: dados.telefone,
+                        value: dados.telefone || 'Não informado',
                         inline: true
                     },
                     {
@@ -99,9 +99,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 botao.textContent = 'Inscrição Concluída!';
                 botao.style.backgroundColor = '#4CAF50';
                 
-                // CORREÇÃO: Usar caminho absoluto para a página obrigado.html
                 setTimeout(() => {
-                    window.location.href = '/obrigado.html';
+                    // Redirecionar para a página de agradecimento
+                    window.location.href = 'obrigado.html';
                 }, 1500);
             } else {
                 throw new Error('Erro ao enviar dados');
