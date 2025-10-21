@@ -98,6 +98,7 @@ section {
     width: 100%;
     top: 0;
     z-index: 1000;
+    transition: all 0.3s ease;
 }
 
 .header .container {
@@ -280,6 +281,13 @@ section {
     border-radius: 5px;
     font-family: 'Open Sans', sans-serif;
     font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.contato-form input:focus,
+.contato-form textarea:focus {
+    outline: none;
+    border-color: var(--primary);
 }
 
 .contato-form textarea {
@@ -438,6 +446,7 @@ section {
 /* Formulário de cadastro */
 .cadastro-section {
     padding: 120px 0 80px;
+    background-color: #f8f9fa;
 }
 
 .cadastro-container {
@@ -472,6 +481,12 @@ section {
     border-radius: 5px;
     font-family: 'Open Sans', sans-serif;
     font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--primary);
 }
 
 .form-row {
@@ -484,27 +499,113 @@ section {
 .obrigado-section {
     padding: 150px 0;
     text-align: center;
+    background-color: #f8f9fa;
 }
 
 .obrigado-content {
-    max-width: 700px;
+    max-width: 800px;
     margin: 0 auto;
+    background: white;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-.obrigado-content i {
+.success-icon {
     font-size: 5rem;
     color: #4CAF50;
     margin-bottom: 30px;
 }
 
+.success-icon i {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
 .obrigado-content h1 {
     margin-bottom: 20px;
     color: var(--primary);
+    font-size: 2.5rem;
 }
 
-.obrigado-content p {
-    margin-bottom: 30px;
+.success-message {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: var(--dark);
+}
+
+.info-box {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    text-align: left;
+    border-left: 4px solid var(--primary);
+}
+
+.info-box h3 {
+    color: var(--primary);
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.info-box p {
+    margin-bottom: 15px;
+    color: var(--dark);
+}
+
+.info-box ul {
+    margin-left: 20px;
+    margin-bottom: 0;
+}
+
+.info-box li {
+    margin-bottom: 8px;
+    color: var(--gray);
+}
+
+.contact-info {
+    background: var(--primary);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 30px 0;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+.contact-info strong {
     font-size: 1.1rem;
+}
+
+/* Loading e estados do formulário */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255,255,255,.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.form-success {
+    background-color: #4CAF50 !important;
+}
+
+.form-error {
+    background-color: #f44336 !important;
 }
 
 /* Responsividade */
@@ -530,11 +631,12 @@ section {
     
     .nav ul {
         margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
     }
     
     .nav ul li {
-        margin-left: 15px;
-        margin-right: 15px;
+        margin: 5px 10px;
     }
     
     .hero-content h2 {
@@ -552,5 +654,51 @@ section {
     .footer-content {
         grid-template-columns: 1fr;
         gap: 30px;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .obrigado-section {
+        padding: 120px 20px 80px;
+    }
+    
+    .obrigado-content {
+        padding: 30px 20px;
+    }
+    
+    .obrigado-content h1 {
+        font-size: 2rem;
+    }
+    
+    .success-icon {
+        font-size: 4rem;
+    }
+    
+    .cadastro-container {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero {
+        padding: 150px 0 80px;
+    }
+    
+    .hero-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .curso-header h1 {
+        font-size: 2rem;
+    }
+    
+    section {
+        padding: 60px 0;
+    }
+    
+    .cadastro-section {
+        padding: 100px 0 60px;
     }
 }
