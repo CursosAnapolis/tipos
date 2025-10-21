@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', function() {
     idadeInputs.forEach(input => {
         input.addEventListener('blur', function(e) {
             const idade = parseInt(e.target.value);
-            if (idade < 16) {
+            if (idade < 1) {
                 alert('É necessário ter pelo menos 16 anos para se inscrever.');
                 e.target.focus();
             } else if (idade > 100) {
