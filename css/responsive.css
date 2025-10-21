@@ -1,0 +1,26 @@
+/* Estilos específicos para responsividade */
+@media (max-width: 576px) {
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .hero {
+        padding: 150px 0 80px;
+    }
+    
+    .hero-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .curso-header h1 {
+        font-size: 2rem;
+    }
+    
+    .cadastro-container {
+        padding: 20px;
+    }
+    
+    section {
+        padding: 60px 0;
+    }
+}
