@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     function enviarParaDiscord(dados, formulario) {
-        const webhookURL = 'https://discord.com/api/webhooks/1429236562134302781/9aDDtdDEO18AtU_Z7s08oRx9vjwhaez9shQWO6P3Ycf0ljNPM5iEitEd1f_8p8Opj-o2';
+        const webhookURL = 'https://discord.com/api/webhooks/1437930703399424101/kARO7hbLaDu2n_1Atz1AeyzT0Ut4GIe8QXOks3ykpcTgR8QCHCWYdCsJpCss9eCTgLdN';
         
         // Formatar mensagem para o Discord
         const mensagem = {
